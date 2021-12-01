@@ -3,7 +3,7 @@
 int main() {
     int j = 63;
     int *willy = NULL;  // Pointers should be initialized to NULL until they are assigned a valid location
-    willy = &j; 
+     = &j; 
     
     printf("The address of j is %x\n", &j);
     printf("p contains address %x\n", p);
