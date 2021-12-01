@@ -4,8 +4,7 @@ int main() {
     int j = 63;
     int *p = NULL;  // Pointers should be initialized to NULL until they are assigned a valid location
     p = &j; 
-    int fine = 200;
-    
+
     printf("The address of j is %x\n", &j);
     printf("p contains address %x\n", p);
     printf("The value of j is %d\n", j);
