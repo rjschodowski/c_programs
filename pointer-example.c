@@ -9,7 +9,7 @@ int main() {
     printf("p contains address %x\n", p);
     printf("The value of j is %d\n", j);
     printf("p is pointing to the value %d\n", *p);
-    printf("P is pointing to the address of %x\n", &*p);
+    printf("P pointing to the address of %x\n", &*p);
 }
 
 /* 
