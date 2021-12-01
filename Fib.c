@@ -16,7 +16,7 @@ int fib(int n)
 
 /*
 n = 0
-a = not reached
+a = not reache
 b = not reached
 tmp = not reached
 return = 0
