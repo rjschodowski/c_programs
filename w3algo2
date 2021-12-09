@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+//Write a C program to get the absolute difference between n and 51. If n is greater than 51 return triple the absolute difference. 
+
+// declaration
+int absDiff(int n);
+
+int main() {
+  int n;
+  int difference;
+
+  // get user input
+  printf("Enter a number:\n");
+  scanf("%d", &n);
+  //calculate difference
+  difference = absDiff(n);
+  // absolute difference between n and 51
+
+  //If n is greater than 51 return triple the absolute difference
+  if (n > 51) 
+  {
+    difference = difference * 3;
+  } // return normal difference
+  printf("%d", difference);
+  
+  return 0;
+}
+
+//definition
+int absDiff(int n)
+{
+  int diff;
+  diff = n-51;
+
+  // if negative
+  if(diff<0)
+  {
+    diff = diff * (-1);
+  } 
+  return diff;
+}
+
