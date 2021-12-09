@@ -1,0 +1,12 @@
+#include <stdio.h>
+
+int main(void) {
+  printf("%d", testing(25, 5));
+  printf("\n%d", testing(20, 30));
+  printf("\n%d", testing(20, 25));
+}
+
+int testing(int x, int y)
+  {
+    return x == 30 || y == 30 || (x + y == 30);
+  }
