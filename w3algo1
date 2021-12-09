@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+//Write a C program to compute the sum of the two given integer values. If the two values are the same, then return triple their sum.
+
+int SUM(int x, int y)
+{
+  int sum = 0;
+  if (x == y) 
+    {
+      sum = (x + y) * 3;
+    } else
+    sum = x + y;
+  return sum;
+}
+
+int main() {
+  int a = 2;
+  int b = 2;
+  int sum = SUM(a, b);
+  
+  printf("sum = %d", sum);
+  return 0;
+}
