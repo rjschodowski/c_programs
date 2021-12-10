@@ -1,0 +1,28 @@
+/*
+
+5. Write a C program to check whether a given positive number is a multiple of 3 or a multiple of 7. 
+Expected Output:
+
+1
+1
+1
+0
+
+*/
+
+#include <stdio.h>
+
+int main(void) {
+  printf("%d", check(3));
+  printf("\n%d", check(6));
+  printf("\n%d", check(9));
+  printf("\n%d", check(13));
+}
+
+int check(int x) 
+{
+  if (x % 3 == 0 || x % 7 == 0) 
+  {
+    return 1;
+  } else return 0;
+}
