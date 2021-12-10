@@ -1,0 +1,32 @@
+/*
+
+Write a C program to check whether a given temperatures is less than 0 and the other is greater than 100. 
+Expected Output:
+
+1
+1
+0
+
+if temp a < 0 && temp b > 100, return true
+
+*/
+
+#include <stdio.h>
+
+int main(void) {
+  printf("%d", check(-1, 200));
+  printf("\n%d", check(300, -200));
+  printf("\n%d", check(-1, -2));
+  printf("\n%d", check(5, 5));
+}
+
+int check(int temp1, int temp2)
+{
+  if ((temp1 < 0 && temp2 > 100) || (temp1 > 0 && temp2 < 100)) 
+  {
+    return 1;
+  } else return 0;
+}
+
+
+
