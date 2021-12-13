@@ -21,7 +21,7 @@ int a and int b or int a or int b > 99 && < 201
 // int main(void) {
 //   printf("%d\n", checkInts(100, 110));
 //   printf("%d\n", checkInts(10, 210));
-//   printf("%d\n", checkInts(100, 110));
+//   printf("%d\n", checkInts(100, 180));
 // }
 
 
