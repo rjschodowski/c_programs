@@ -1,0 +1,54 @@
+#include <stdio.h>
+
+/*
+
+Write a C program to check two given integers whether either of them is in the range 100..200 inclusive. 
+Expected Output:
+
+1
+0
+1
+
+int a
+int b
+
+int a and int b or int a or int b > 99 && < 201
+
+*/
+
+//My initial attempt
+
+// int main(void) {
+//   printf("%d\n", checkInts(100, 110));
+//   printf("%d\n", checkInts(10, 210));
+//   printf("%d\n", checkInts(100, 110));
+// }
+
+
+// int checkInts(int a, int b)
+// {
+//   if (((a && b > 99) && (a && b < 201))) 
+//   {
+//     return 1;
+//   } else return 0;
+// }
+
+// Correct answer
+
+#include <stdio.h>
+#include <stdlib.h>
+int main(void){
+    printf("%d",test(100, 199));
+    printf("\n%d",test(250, 300));
+    printf("\n%d",test(105, 190));
+    }   
+   int test(int x, int y)
+        {
+             return (x >= 100 && x <= 200) || (y >= 100 && y <= 200);
+        }
+
+
+//In summary I was initially trying to code all situations of when a given number would be within the 100 - 200 parameters. I even added a || (((a || b > 99) || (a || b < 201))), but this did not work. Besides, this seemed too complicated and I sensed it could be refactored to something much more efficient. I realize now that I had the right idea, but that instead of comparing both variables together for both >99 and <201, it is better to compare them separately, since the problem is asking to check whether either of the integers are within 100 - 200, inclusive.
+
+//Good learning experience. Now, on to the next one!
+
