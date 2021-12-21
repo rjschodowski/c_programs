@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+
+//Simple pointer exercise
+
+
+int main() {
+  int slices = 20;
+  int *pizza_slices = &slices;
+
+  printf("Slices: %d\n", slices);
+  printf("Slices (via pointer): %d\n", *pizza_slices);
+
+  //Changing number of slices via variable slices
+
+  slices = 36;
+
+  printf("Slices: %d\n", slices);
+  printf("Slices (via pointer): %d\n", *pizza_slices);
+
+
+//Changing number of slices via the pointer *pizza_slices
+
+*pizza_slices = 72;
+
+  printf("Slices: %d\n", slices);
+  printf("Slices (via pointer): %d\n", *pizza_slices);
+
+  return 0;
+}
