@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+
+/*
+
+Write a program in C to add numbers using call by reference.
+Test Data :
+Input the first number : 5
+Input the second number : 6
+Expected Output :
+
+ The sum of 5 and 6  is 11 
+
+*/
+
+int passAdd(int* nro1, int* nro2) {
+ 
+  int sum = *nro1 + *nro2;
+  return sum;
+}
+
+int main() {
+  int repeat;
+  while ( repeat >= 0) //I wanted to add the while loop to repeat as often as desired. :smile:
+
+  {
+    int myNum1;
+    int myNum2;
+    printf("Enter a number:\n");
+    scanf("\n\n%d", &myNum1);
+    printf("Enter a second number:\n");
+    scanf("\n\n%d", &myNum2);
+    printf("The sum is %d\n\n",  passAdd(&myNum1, &myNum2));
+  }
+}
