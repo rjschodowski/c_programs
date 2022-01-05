@@ -1,0 +1,41 @@
+/*
+Write a program in C to store n elements in an array and print the elements using pointer. 
+Test Data :
+Input the number of elements to store in the array :5
+Input 5 number of elements in the array :
+element - 0 : 5
+element - 1 : 7
+element - 2 : 2
+element - 3 : 9
+element - 4 : 8
+Expected Output :
+
+ The elements you entered are :                                                                               
+ element - 0 : 5                                                                                              
+ element - 1 : 7                                                                                              
+ element - 2 : 2                                                                                              
+ element - 3 : 9                                                                                              
+ element - 4 : 8 
+*/
+
+
+#include <stdio.h>
+
+int main() {
+  int array[5];
+  int i, *ptr;
+  ptr = &array[5];
+
+  array[0] = 5;
+  array[1] = 7;
+  array[2] = 2;
+  array[3] = 9;
+  array[4] = 8;
+
+  for (i = 0; i < 5; i++) {
+    printf("ELement - %d : %d\n", i, *ptr);
+  }
+}
+
+//I'm so close, but I keep getting 32765 for the right-hand side numbers...What did I forget to do or do incorrectly?
+
