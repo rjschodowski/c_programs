@@ -1,0 +1,67 @@
+/*
+
+Write a program in C to find the maximum number between two numbers using a pointer. 
+Test Data :
+Input the first number : 5
+Input the second number : 6
+Expected Output :
+
+6 is the maximum number.
+
+*/
+#include <stdio.h>
+
+void checkMaxNr(int a, int b) {
+  if (a > b) {
+    printf("%d is your max number", a);
+  } else if (a < b) {
+    printf("%d is your max number", b);
+  } else {
+    printf("%d and %d are equal!", a, b);
+  }
+}
+
+int main() {
+  int a, b, *nbr1, *nbr2;
+
+  nbr1 = &a;
+  nbr2 = &b;
+
+   printf("Enter a number:\n");
+   scanf("\n\n%d", nbr1);
+    printf("Enter a second number:\n");
+    scanf("\n\n%d", nbr2);
+    checkMaxNr(*nbr1, *nbr2);
+}
+
+
+
+/* Website's example solution:
+
+#include <stdio.h>
+#include <stdlib.h>
+void main()
+{
+ int fno,sno,*ptr1=&fno,*ptr2=&sno;
+ 
+   printf("\n\n Pointer : Find the maximum number between two numbers :\n"); 
+   printf("------------------------------------------------------------\n");   
+ 
+   printf(" Input the first number : ");
+   scanf("%d", ptr1);
+   printf(" Input the second  number : ");
+   scanf("%d", ptr2); 
+
+
+ if(*ptr1>*ptr2)
+ {
+  printf("\n\n %d is the maximum number.\n\n",*ptr1);
+ }
+ else
+ {
+  printf("\n\n %d is the maximum number.\n\n",*ptr2);
+ }
+
+}
+
+*/
