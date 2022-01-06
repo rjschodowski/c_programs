@@ -2,6 +2,8 @@
 
 //Reminder: the first [] is for rows, the second [] is for columns
 
+//Also, An array can have more than two dimensions. For example, a[5][3][4] is an array that has 5 elements that each store 3 elements that each store 4 elements.
+
 int main() {
     int a[3][5] = {
       {19, 12, 19, 8, 600},
