@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+//Reminder: the first [] is for rows, the second [] is for columns
+
+int main() {
+    int a[3][5] = {
+      {19, 12, 19, 8, 600},
+      {0, 0, 0, 0, 0},
+      {77, 23, 11, 1, 997}
+      };
+    
+    int j, k;
+
+    for(j=0; j<3; j++) {
+      for(k=0; k<5; k++) {
+        printf("%d\t", a[j][k]);
+      }
+        printf("\n");
+    }
+    
+    return 0;
+}
