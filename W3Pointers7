@@ -18,24 +18,72 @@ Expected Output :
  element - 4 : 8 
 */
 
+//----------------------------------------------------------------------------------------------
 
 #include <stdio.h>
+//My first attempt:
+
+// int main() {
+//   int array[5];
+//   int i, *ptr;
+//   ptr = &array[5];
+
+//   array[5] = 5;
+//   array[5] = 7;
+//   array[5] = 2;
+//   array[5] = 9;
+//   array[5] = 8;
+
+//   for (i = 0; i < 5; i++) {
+//     printf("ELement - %d : %d\n", i, *ptr);
+//   }
+// }
+
+//I'm so close, but I keep getting 32765 for the right-hand side numbers...What did I forget to do or do incorrectly?
+
+//----------------------------------------------------------------------------------------------
+
+//My second attempt (thanks for the 'pointers', Lloyd! ha ha ha):
 
 int main() {
   int array[5];
   int i, *ptr;
   ptr = &array[5];
 
-  array[0] = 5;
-  array[1] = 7;
-  array[2] = 2;
-  array[3] = 9;
-  array[4] = 8;
+  *ptr = 5;
+  *(ptr+1) = 7;
+  *(ptr+2) = 2;
+  *(ptr+3) = 9;
+  *(ptr+4) = 8;
 
   for (i = 0; i < 5; i++) {
-    printf("ELement - %d : %d\n", i, *ptr);
+    printf("ELement - %d : %d\n", i, *(ptr+i));
   }
 }
+//----------------------------------------------------------------------------------------------
 
-//I'm so close, but I keep getting 32765 for the right-hand side numbers...What did I forget to do or do incorrectly?
+//W3's solution:
 
+// int main()
+// {
+//    int arr1[25], i,n;
+//    printf("\n\n Pointer : Store and retrieve elements from an array :\n"); 
+//    printf("------------------------------------------------------------\n");    
+//    printf(" Input the number of elements to store in the array :");
+//    scanf("%d",&n);
+   
+//    printf(" Input %d number of elements in the array :\n",n);
+//    for(i=0;i<n;i++)
+//       {
+// 	  printf(" element - %d : ",i);
+// 	  scanf("%d",arr1+i);
+// 	  }
+//    printf(" The elements you entered are : \n");
+//    for(i=0;i<n;i++)
+//       {
+// 	  printf(" element - %d : %d \n",i,*(arr1+i));
+// 	  }
+// 	   return 0;
+// }
+
+//I learned from Lloyd that arrays and vectors are all pointers. Knowing this, in W3's solution above you will see that the array arr1 (line 69)is a pointer. This is why on line 84 arr1 is dereferenced with the *, so it will properly print. I also learned that there needs to be parenthesis around the arr1 + i because you are dereferencing not only the first item in the array, but all of its contents. To do otherwise and then print it would only print the first array item, which in the example would be 5 (see line 6).
