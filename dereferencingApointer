@@ -1,0 +1,17 @@
+//This is to help me remember how to dereference a pointer and why it is done.
+
+//Pointers need to be dereferenced so that way you can access the value that is stored at the original memory address.
+
+//For example, let's say I create the following variable below and a pointer that points to the variable's memory address:
+
+#include <stdio.h>
+
+int main() {
+  int apple = 5;
+  int* ptrManzana;
+  ptrManzana = &apple;
+  printf("%p\n", ptrManzana); //Here I am printing out the value of the memory address, which is pointing to variable apple's memory location.
+
+  printf("%d\n", *ptrManzana); //Here I have dereferenced ptrManzana by changing the %p (this prints a pointer address) to %d (this prints the integer) and I added the * to dereference the pointer and print the value that ptrManzana points to, (which is apple), which is 5. Woot!
+  return 0;
+}
