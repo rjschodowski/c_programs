@@ -1,0 +1,78 @@
+/*
+Write a program in C to demonstrate the use of &(address of) and *(value at address) operator. Go to the editor
+Expected Output :
+
+Pointer : Demonstrate the use of & and * operator :                                                          
+--------------------------------------------------------                                                      
+ m = 300                                                                                                      
+ fx = 300.600006                                                                                              
+ cht = z                                                                                                      
+                                                                                                              
+ Using & operator :                                                                                           
+-----------------------                                                                                       
+ address of m = 0x7ffda2eeeec8                                                                                
+ address of fx = 0x7ffda2eeeecc                                                                               
+ address of cht = 0x7ffda2eeeec7                                                                              
+                                                                                                              
+ Using & and * operator :                                                                                     
+-----------------------------                                                                                 
+ value at address of m = 300                                                                                  
+ value at address of fx = 300.600006                                                                          
+ value at address of cht = z                      
+
+Using only pointer variable :                                                                                
+----------------------------------                                                                            
+ address of m = 0x7ffda2eeeec8                                                                                
+ address of fx = 0x7ffda2eeeecc                                                                               
+ address of cht = 0x7ffda2eeeec7                                                                              
+                                                                                                              
+ Using only pointer operator :                                                                                
+----------------------------------                                                                            
+ value at address of m = 300                                                                                  
+ value at address of fx= 300.600006                                                                           
+ value at address of cht= z
+ */     
+
+#include <stdio.h>
+
+int main() {
+  
+int m = 300;
+double fx = 300.600006;
+int z;
+char cht = 'z';
+int* ptrM = &m;
+double* ptrFX = &fx;
+char* ptrCHT = &cht;
+
+  printf("Pointer: Demonstrate the use of & and * operator :\n");
+  printf("--------------------------------------------------\n\n");
+  printf("m = %d\n", m);
+  printf("fx = %f\n", fx);
+  printf("cht = %c\n\n", cht);
+
+  printf("Using the & operator: ");
+  printf("----------------------------\n\n");
+  printf("Address of m = %p\n", &m);
+  printf("Address of fx = %p\n", &fx);
+  printf("Address of cht = %p\n\n", &cht);
+
+  printf("Using & and the * operator: ");
+  printf("----------------------------\n\n");
+  printf ( " value at address of m = %d\n",*(&m));
+  printf ( " value at address of fx = %f\n",*(&fx));
+  printf ( " value at address of cht = %c\n",*(&cht));
+
+  printf("Using only pointer variable: ");
+  printf("----------------------------\n\n");
+  printf("Address of m = %p\n", ptrM);
+  printf("Address of fx = %p\n", ptrFX);
+  printf("Address of cht = %p\n\n", ptrCHT);
+
+  printf("Using only pointer operator : ");
+  printf("----------------------------\n\n");
+  printf ( " value at address of m = %d\n",*ptrM);
+  printf ( " value at address of fx = %f\n",*ptrFX);
+  printf ( " value at address of cht = %c\n",*ptrCHT);
+  
+}
