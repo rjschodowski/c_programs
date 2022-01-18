@@ -1,29 +1,68 @@
 /*
 
-9. Write a C program to check whether two given integer values are in the range 20..50 inclusive. Return true if 1 or other is in the said range otherwise false. 
-Expected Output:
+Write a program in C to find the largest element using Dynamic Memory Allocation.
+Test Data :
+Input total number of elements(1 to 100): 5
 
-1
-1
-1
-0
+Number 1: 5
+Number 2: 7
+Number 3: 2
+Number 4: 9
+Number 5: 8
+Expected Output :
+
+The Largest element is :  9.00
 
 */
 
-
 #include <stdio.h>
+#include <stdlib.h>
+// //Why do you need to use dynamic memory allocation to find largest element??
 
-int main(void)
-{
-  printf("%d\n", verify(22, 41));
-  printf("%d\n", verify(50, 36));
-  printf("%d\n", verify(22,1));
-  printf("%d\n", verify(19, 5));
+// /*
+// My logic:
+// 1) Enter # of elements (ie: 5)
+// 2) Enter value for element 1, element 2, element 3, etc.
+// 3) Assign value entered for each element
+// 4) **Somehow use memory allocation to determine largest element's value
+// 5) Print largest element's value
+// */
+
+// //First attempt...I was trying to get steps 1-3 to work first, but...failed it!
+
+//For the malloc help: https://www.geeksforgeeks.org/dynamic-memory-allocation-in-c-using-malloc-calloc-free-and-realloc/
+int main() {
+int elements, value;
+int i = 1;
+  
+  //Collect # of elements and assigned number value
+  printf("Input total number of elements(1 to 100): \n");
+  scanf("\n\n%d", &elements);
+
+  //ptr = (int*)malloc(elements * sizeof(int));
+  int ptr[elements];
+  
+  while (i <= elements) {
+    printf("Input value for element: \n");
+    scanf("\n\n%d", &value);
+    printf("Number %d: %d\n\n", i, value);
+    i++;
+  }
+  
+  //Determine how many times to enter number values based on # of elements
+  
+  return 0;
 }
 
-int verify(int a, int b) 
-{
-  return (a >= 20 && a <= 50) || (b >= 20 && b <= 50);
-}
+//Second attempt
 
-//This is a variation of the previous challenge (W3Algo8).
+// #include <stdio.h>
+// #include <stdlib.h>
+
+// int main() {
+//   int elements, value;
+
+//   printf("Input total number of elements(1 to 100): \n");
+//   scanf("\n\n%d", &elements);
+
+// }
