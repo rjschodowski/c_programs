@@ -1,0 +1,11 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+  int *ptr = (int*)malloc(sizeof(int));
+  *ptr = 11;
+  printf("Pointer size is: %d", sizeof(*ptr));
+  free(ptr);
+
+  return 0;
+}
