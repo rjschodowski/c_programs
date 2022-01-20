@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+  int a = 25;
+  int* ptra = &a;
+  int** ptrb = &ptra;
+  
+  //Initial values
+  printf("A has the value of %d\n", a);
+  printf("Ptra has the value of %d\n", *ptra);
+  printf("Ptrb has the value of %d\n\n", **ptrb);
+  
+  //Memory addresses
+  
+  printf("A's memory location is: %p\n\n", &a);
+  
+  printf("Ptra's memory location is: %p\n\n", ptra);
+  
+  printf("Ptrb's memory location is: %p\n\n", *ptrb);
+
+
+  return 0;
+}
