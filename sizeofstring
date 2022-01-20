@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+// int main() {
+//   int *ptr = (int*)malloc(sizeof(int));
+//   *ptr = 11;
+//   printf("Pointer size is: %d", sizeof(*ptr));
+
+//   return 0;
+// }
+
+int main() {
+    char str[] = "A little while longer and the world will see Me no more, but you will see Me. Because I live, you will live also. ~ Jesus\n";
+    printf("String size is %lu", sizeof(str));
+    
+    return 0;
+}
