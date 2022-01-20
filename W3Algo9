@@ -40,37 +40,35 @@ int* ptr;
   printf("Input total number of elements(1 to 100): \n");
   scanf("\n\n%d", &elements);
 
-  ptr = (int*)malloc(elements * sizeof(int));
-
   if (ptr == NULL) {
     printf("Memory not allocated.\n");
     exit(0);
   } else {
-    printf("Memory successfully allocated using malloc.\n");
+    printf("Memory successfully allocated using malloc.\n\n");
   }
-  // int ptr[elements];
   
+  //populating the array
   while (i <= elements) {
     printf("Input value for element: \n");
     scanf("\n\n%d", &value);
     printf("Number %d: %d\n\n", i, value);
+    ptr[i] = value;
     i++;
   }
-  
-  //Determine how many times to enter number values based on # of elements
+  int largestnumber = 0;
+
+  //finding highest value in array
+  for( int m = 0; m < elements; m++)
+  {
+    if (ptr[m] > largestnumber)
+    {
+      largestnumber = ptr[m];
+    }
+  }
+  printf("The largest element is: %d\n", largestnumber);
   
   return 0;
 }
 
-//Second attempt
 
-// #include <stdio.h>
-// #include <stdlib.h>
 
-// int main() {
-//   int elements, value;
-
-//   printf("Input total number of elements(1 to 100): \n");
-//   scanf("\n\n%d", &elements);
-
-// }
