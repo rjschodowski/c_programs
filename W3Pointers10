@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <string.h>
+
+/*
+Write a program in C to Calculate the length of the string using a pointer.
+Test Data :
+Input a string : w3resource
+Expected Output :
+
+The length of the given string w3resource                                                                    
+is : 10    
+*/
+
+int main() {
+  char string[100] = "Here.";
+  printf("The length of this string is: %ld", strlen(string));
+  return 0;
+}
+
+//Problem still in the process of being solved 1/24/2022
