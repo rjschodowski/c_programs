@@ -50,6 +50,7 @@ Scanf didn't work; I had to use scanf_s.
 Here's what helped me figure out how to use that, with an explanation as to why it is needed to be used:
 
 http://faculty.edcc.edu/paul.bladek/CS131/scanf_s.htm
+*/
 
 int string_ln(char*);
 
