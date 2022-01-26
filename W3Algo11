@@ -1,0 +1,33 @@
+/*Write a C program to check whether two given integers are in the range 40..50 inclusive, or they are both in the range 50..60 inclusive. Go to the editor
+Expected Output:
+
+0
+0
+1
+1
+*/
+
+#include<stdio.h>
+
+// int main() {
+//   int check = checkints(int a, int b);
+//   printf("%d, %d", a, b);
+// }
+
+// int checkInts(int a, int b) {
+//   (a >= 40 && a <= 50) ? 1 : 0;
+//   (a >= 50 && a <= 60) ? 1 : 0;
+//   (b >= 40 && b <= 50) ? 1 : 0;
+//   (b >= 50 && b <= 60) ? 1 : 0;
+// }
+
+int checkInts(int a, int b) {
+  return ((a >= 40 && a <= 50) && (b >= 40 && b <= 50) || (a >= 50 && a <= 60) && (b >= 50 && b <= 60));
+}
+
+int main() {
+  printf("%d\n", checkInts(10, 20));
+  printf("%d\n", checkInts(9, 59));
+  printf("%d\n", checkInts(40, 45));
+  printf("%d\n", checkInts(60, 52));
+}
