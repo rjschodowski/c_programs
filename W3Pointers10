@@ -1,56 +1,7 @@
-#include <stdio.h>
-#include <string.h>
-
-/*
-Write a program in C to Calculate the length of the string using a pointer.
-Test Data :
-Input a string : w3resource
-Expected Output :
-
-The length of the given string w3resource                                                                    
-is : 10    
-*/
-
-
-//First I will try to print a string length
-// int main() {
-//   char string[100] = "Here.";
-//   printf("The length of this string is: %ld", strlen(string));
-//   return 0;
-// }
-
-//Now I will print a string length using a pointer
-
-// int strlength(char* s);
-// int main() {
-//   char s[100];
-//   gets(s);
-//   printf("The string length is %d\n", strlength(s));
-// }
-
-// int strlength(char* s) {
-//   int c = 0;
-//   while (*s != '\0') {
-//     c++;
-//     s++;
-//   }
-//   return c;
-// }
-
 /*  C Program to Find Length of String using Pointers  */
 
 #include<stdio.h>
-
-
-/*  C Program to Find Length of String using Pointers  */
-
-//Here is the solution.
-/*
-Scanf didn't work; I had to use scanf_s.
-Here's what helped me figure out how to use that, with an explanation as to why it is needed to be used:
-
-http://faculty.edcc.edu/paul.bladek/CS131/scanf_s.htm
-*/
+#include<conio.h>
 
 int string_ln(char*);
 
@@ -59,7 +10,7 @@ int main()
     char str[20];
     int length;
 
-    printf("Enter any string :: ");
+    printf("Enter any string: ");
     scanf_s("%19s", str, 20);
 
     length = string_ln(str);
