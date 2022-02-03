@@ -1,0 +1,46 @@
+//Our group solution - Code Gym Thursday meetup
+
+/*Write a program in C to find the factorial of a given number using pointers. Go to the editor
+
+Test Data :
+
+Input a number : 5
+
+Expected Output :
+
+
+
+The Factorial of 5 is : 120*/
+
+
+
+#include<stdio.h>
+
+#include<stdlib.h>
+
+#include<math.h>
+
+
+
+
+int main()
+
+{
+
+int input;
+
+printf("Input a number: ");
+
+scanf("%d", &input);
+
+int output = input*(input-1);
+
+for (int i = input - 2; i > 1; i--){
+
+output = output*i;
+
+}
+
+printf("%d",output);
+
+}
