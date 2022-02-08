@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <string.h>
+#define FALSE 0
+#define TRUE 1
+
+void displayHelp() {
+  printf("- `help`, shows the list of commands and what they do.\n");
+  printf("- `add`, will add a new Employee. Please see how the Employee structure should look like in below\n");
+  printf("- `show`, shows a list of all the Employees\n");
+  printf("- `showasc`, show list of all Employees sorted in ascending order.\n");
+  printf("- `showdesc`, show list of all Employees sorted in descending order.\n");
+  printf("- `search first <string>`, searches the list of employees by first name.\n");
+  printf("- `search last <string>`, searches the list of employees by last name.\n");
+  printf("- `exit` to exit\n\n");
+}
+
+void search(char *str) {
+  printf("\n");
+}
+
+int main(void) {
+  printf("-----------The Employee Database-------------\n");
+
+  int exit = FALSE;
+  char command[32];
+
+  while(!exit) {
+    printf("What would like to do? Enter 'help' for list of commands\n>> ");
+    scanf("%s", command);
+
+    if(strcmp(command, "help") == 0) {
+      displayHelp();
+    }
+    else if(strcmp(command, "exit") == 0) {
+      exit = TRUE;
+    }
+    else {
+      printf("Please enter a valid input\n\n");
+    }
+  }
+  return 0;
+}
