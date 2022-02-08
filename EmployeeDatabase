@@ -1,7 +1,17 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdbool.h>
 #define FALSE 0
 #define TRUE 1
+
+struct employees {
+  char firstName[50];
+  char lasstName[50];
+  bool employeePermanent, employeePT;
+  double hoursWorked;
+
+
+}
 
 void displayHelp() {
   printf("- `help`, shows the list of commands and what they do.\n");
