@@ -7,12 +7,12 @@
 struct employee {
   char firstName[50];
   char lastName[50];
-  bool employeePermanent, employeePT;
+  char employeeType[10];
   int hoursWorked;
-}emp1 = {"Roy", "Willis", true, 48};
+}emp1 = {"Roy", "Willis", "full-time", 48};
 
 void displayHelp() {
-  printf("Employee 1 Stats:\n\n %s \n%s \n%d \n%d\n", emp1.firstName, emp1.lastName, emp1.employeePT, emp1.hoursWorked);
+  printf("Employee 1 Stats:\n\n%s \n%s \n%s \n%d\n", emp1.firstName, emp1.lastName, emp1.employeeType, emp1.hoursWorked);
   printf("- `help`, shows the list of commands and what they do.\n");
   printf("- `add`, will add a new Employee. Please see how the Employee structure should look like in below\n");
   printf("- `show`, shows a list of all the Employees\n");
