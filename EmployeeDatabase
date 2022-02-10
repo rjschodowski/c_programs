@@ -7,12 +7,13 @@
 struct employee {
   char firstName[50];
   char lastName[50];
-  char employeeType[10];
+  char employeeType[10];  
   int hoursWorked;
-}emp1 = {"Roy", "Willis", "full-time", 48};
+}emp1 = {"Roy", "Gbiv", "full-time", 48},
+emp2 = {"Gee", "Willikers", "part-time", 20},
+emp3 = {"Sarah", "Strongblood", "full-time", 40};
 
 void displayHelp() {
-  printf("Employee 1 Stats:\n\n%s \n%s \n%s \n%d\n", emp1.firstName, emp1.lastName, emp1.employeeType, emp1.hoursWorked);
   printf("- `help`, shows the list of commands and what they do.\n");
   printf("- `add`, will add a new Employee. Please see how the Employee structure should look like in below\n");
   printf("- `show`, shows a list of all the Employees\n");
@@ -21,6 +22,12 @@ void displayHelp() {
   printf("- `search first <string>`, searches the list of employees by first name.\n");
   printf("- `search last <string>`, searches the list of employees by last name.\n");
   printf("- `exit` to exit\n\n");
+}
+
+void displayEmployees() {
+  printf("Employee 1 Stats:\n\n%s \n%s \n%s \n%d\n\n", emp1.firstName, emp1.lastName, emp1.employeeType, emp1.hoursWorked);
+  printf("Employee 2 Stats:\n\n%s \n%s \n%s \n%d\n\n", emp2.firstName, emp2.lastName, emp2.employeeType, emp2.hoursWorked);
+  printf("Employee 3 Stats:\n\n%s \n%s \n%s \n%d\n\n", emp3.firstName, emp3.lastName, emp3.employeeType, emp3.hoursWorked);
 }
 
 void search(char *str) {
@@ -39,6 +46,9 @@ int main(void) {
 
     if(strcmp(command, "help") == 0) {
       displayHelp();
+    }
+    else if (strcmp(command, "show") == 0) {
+      displayEmployees();
     }
     else if(strcmp(command, "exit") == 0) {
       exit = TRUE;
