@@ -7,8 +7,8 @@
 struct employee {
   char firstName[50];
   char lastName[50];
-  char employeeType[10];  
-  int hoursWorked;
+  // char employeeType[10];  
+  // int hoursWorked;
 }emp1 = {"Roy", "Gbiv", "full-time", 48},
 emp2 = {"Gee", "Willikers", "part-time", 20},
 emp3 = {"Sarah", "Strongblood", "full-time", 40};
@@ -23,8 +23,14 @@ void displayHelp() {
   printf("- `search last <string>`, searches the list of employees by last name.\n");
   printf("- `exit` to exit\n\n");
 }
-
+//Here is where I left off on 2/10/22. I'm trying to ensure that employees are correctly assigned either part-time or full-time, based on hours worked.
 void displayEmployees() {
+  int hoursWorked;
+  char employeeType[10];
+if (hoursWorked < 40) {
+  employeeType[] = "Part-Time";
+} 
+
   printf("Employee 1 Stats:\n\n%s \n%s \n%s \n%d\n\n", emp1.firstName, emp1.lastName, emp1.employeeType, emp1.hoursWorked);
   printf("Employee 2 Stats:\n\n%s \n%s \n%s \n%d\n\n", emp2.firstName, emp2.lastName, emp2.employeeType, emp2.hoursWorked);
   printf("Employee 3 Stats:\n\n%s \n%s \n%s \n%d\n\n", emp3.firstName, emp3.lastName, emp3.employeeType, emp3.hoursWorked);
