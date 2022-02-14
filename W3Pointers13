@@ -9,23 +9,30 @@ Number of constant : 5
 */
 
 #include <stdio.h>
-#include <string.h>
 
 int main() {
-  char word[50], letter;
-  int vowels = 0, i;
-  printf("Enter a word: ");
-  scanf("%s", word);
-  printf("\nYour word is %s.\n\nLet's see which vowels it has, and how many...\n\n", word);
+	unsigned short count = 0, vowels = 0, consonants = 0;
+	char str[100], c, *cc = &c;
 
-  for (i = 0; word[i] != '\0'; i++) {
-      letter = word[i];
-      if (letter == 'a' || letter == 'A' || letter == 'e' || letter == 'E' || letter == 'i' || letter == 'I' || letter == 'o' || letter == 'O' || letter == 'u' || letter == 'U') {
-        vowels++;
-        printf("%c", letter);
-      } 
-  } 
-   	  printf("\n\nNUMBER OF VOWELS: %d \n", vowels);
-   
-  return 0;
+	printf("Enter a string: ");
+	scanf("%[^\n]", str);
+
+   	while(str[count] != '\0') {
+   	  c = str[count];
+   	  if(*cc == 'a' || *cc == 'A' || *cc == 'e' || *cc == 'E' || *cc == 'i' || c == 'I'
+   	  	|| *cc == 'o' || *cc == 'O' || *cc == 'u' || *cc == 'U') {
+   	  	vowels++;
+   	  } else {
+         consonants++;
+         
+       }
+   	  count++;
+   	}
+
+   	printf("\n");
+   	printf("NUMBER OF VOWELS: %hu \n", vowels);
+     printf("\n");
+   	printf("NUMBER OF CONSONANTS: %hu \n", consonants);
+
+	return 0;
 }
