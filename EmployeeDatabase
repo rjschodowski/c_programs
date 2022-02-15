@@ -7,11 +7,19 @@
 struct employee {
   char firstName[50];
   char lastName[50];
-  // char employeeType[10];  
-  // int hoursWorked;
-}emp1 = {"Roy", "Gbiv", "full-time", 48},
+  char employeeType[10];  
+  int hoursWorked;
+  struct employee *next;
+};
+//Learn about linked lists to help complete this section: https://www.tutorialspoint.com/data_structures_algorithms/linked_list_program_in_c.htm
+struct employee *head = NULL;
+struct emplyee *current = NULL;
+
+emp1 = {"Roy", "Gbiv", "full-time", 48},
 emp2 = {"Gee", "Willikers", "part-time", 20},
 emp3 = {"Sarah", "Strongblood", "full-time", 40};
+
+struct employee EmployeeList[50];
 
 void displayHelp() {
   printf("- `help`, shows the list of commands and what they do.\n");
@@ -28,7 +36,7 @@ void displayEmployees() {
   int hoursWorked;
   char employeeType[10];
 if (hoursWorked < 40) {
-  employeeType[] = "Part-Time";
+  employeeType[10] = "Part-Time";
 } 
 
   printf("Employee 1 Stats:\n\n%s \n%s \n%s \n%d\n\n", emp1.firstName, emp1.lastName, emp1.employeeType, emp1.hoursWorked);
