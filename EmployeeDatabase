@@ -11,9 +11,15 @@ struct employee {
   int hoursWorked;
   struct employee *next;
 };
-//Learn about linked lists to help complete this section: https://www.tutorialspoint.com/data_structures_algorithms/linked_list_program_in_c.htm
+/* Learn about linked lists to help complete this section: 
+
+https://www.tutorialspoint.com/data_structures_algorithms/linked_list_algorithms.htm
+
+https://www.tutorialspoint.com/data_structures_algorithms/linked_list_program_in_c.htm
+
+*/
 struct employee *head = NULL;
-struct emplyee *current = NULL;
+struct employee *current = NULL;
 
 emp1 = {"Roy", "Gbiv", "full-time", 48},
 emp2 = {"Gee", "Willikers", "part-time", 20},
