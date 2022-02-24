@@ -1,0 +1,23 @@
+//Problem: find the largest of two numbers, using pointers.
+
+
+#include <stdio.h>
+
+int* findGreater(int*nro1, int*nro2) {
+  int* largest = (*nro1 > *nro2) ? nro1 : nro2;
+  return largest;
+}
+
+int main() {
+  int num1, num2;
+  printf("Enter a number, please: \n");
+  scanf("%d", &num1);
+  printf("Enter a second number, please: \n");
+  scanf("%d", &num2);
+
+  int* nro1 = &num1;
+  int* nro2 = &num2;
+  int largestAnswer = *findGreater(nro1, nro2);
+  printf("The greater number is %d", largestAnswer);
+  return 0;
+}
