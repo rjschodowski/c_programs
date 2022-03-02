@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <string.h>
-#include <stdbool.h>
 #define FALSE 0
 #define TRUE 1
 
@@ -9,24 +8,8 @@ struct employee {
   char lastName[50];
   char employeeType[10];  
   int hoursWorked;
-  struct employee *next;
 };
-/* Learn about linked lists to help complete this section: 
-
-https://www.tutorialspoint.com/data_structures_algorithms/linked_list_algorithms.htm
-
-https://www.tutorialspoint.com/data_structures_algorithms/linked_list_program_in_c.htm
-
-*/
-struct employee *head = NULL;
-struct employee *current = NULL;
-
-emp1 = {"Roy", "Gbiv", "full-time", 48},
-emp2 = {"Gee", "Willikers", "part-time", 20},
-emp3 = {"Sarah", "Strongblood", "full-time", 40};
-
-struct employee EmployeeList[50];
-
+  
 void displayHelp() {
   printf("- `help`, shows the list of commands and what they do.\n");
   printf("- `add`, will add a new Employee. Please see how the Employee structure should look like in below\n");
@@ -37,13 +20,11 @@ void displayHelp() {
   printf("- `search last <string>`, searches the list of employees by last name.\n");
   printf("- `exit` to exit\n\n");
 }
-//Here is where I left off on 2/10/22. I'm trying to ensure that employees are correctly assigned either part-time or full-time, based on hours worked.
+
 void displayEmployees() {
-  int hoursWorked;
-  char employeeType[10];
-if (hoursWorked < 40) {
-  employeeType[10] = "Part-Time";
-} 
+  struct employee emp1 = {"Roy", "Gbiv", "full-time", 48};
+  struct employee emp2 = {"Gee", "Willikers", "part-time", 20};
+  struct employee emp3 = {"Sarah", "Strongblood", "full-time", 40};
 
   printf("Employee 1 Stats:\n\n%s \n%s \n%s \n%d\n\n", emp1.firstName, emp1.lastName, emp1.employeeType, emp1.hoursWorked);
   printf("Employee 2 Stats:\n\n%s \n%s \n%s \n%d\n\n", emp2.firstName, emp2.lastName, emp2.employeeType, emp2.hoursWorked);
@@ -76,6 +57,9 @@ int main(void) {
     else {
       printf("Please enter a valid input\n\n");
     }
+ 
   }
+
+  
   return 0;
 }
