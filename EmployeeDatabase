@@ -9,7 +9,12 @@ struct employee {
   char employeeType[10];  
   int hoursWorked;
 };
-  
+
+char enterFirstName[50];
+char enterLastName[50];
+
+//Help command function
+
 void displayHelp() {
   printf("- `help`, shows the list of commands and what they do.\n");
   printf("- `add`, will add a new Employee. Please see how the Employee structure should look like in below\n");
@@ -21,6 +26,8 @@ void displayHelp() {
   printf("- `exit` to exit\n\n");
 }
 
+//Show command function
+
 void displayEmployees() {
   struct employee emp1 = {"Roy", "Gbiv", "full-time", 48};
   struct employee emp2 = {"Gee", "Willikers", "part-time", 20};
@@ -29,6 +36,15 @@ void displayEmployees() {
   printf("Employee 1 Stats:\n\n%s \n%s \n%s \n%d\n\n", emp1.firstName, emp1.lastName, emp1.employeeType, emp1.hoursWorked);
   printf("Employee 2 Stats:\n\n%s \n%s \n%s \n%d\n\n", emp2.firstName, emp2.lastName, emp2.employeeType, emp2.hoursWorked);
   printf("Employee 3 Stats:\n\n%s \n%s \n%s \n%d\n\n", emp3.firstName, emp3.lastName, emp3.employeeType, emp3.hoursWorked);
+}
+
+//Add command function. Pick up here from where you left off, on the add function
+
+void add() {
+  printf("Enter employee's first name");
+  scanf("%c", &enterFirstName[50]);
+  printf("Enter employee's last name");
+  scanf("%c", &enterLastName[50]);
 }
 
 void search(char *str) {
