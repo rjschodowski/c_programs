@@ -12,6 +12,8 @@ struct employee {
 
 char enterFirstName[50];
 char enterLastName[50];
+char enterWorkStatus[10];
+int enterWorkHours;
 
 //Help command function
 
@@ -38,13 +40,20 @@ void displayEmployees() {
   printf("Employee 3 Stats:\n\n%s \n%s \n%s \n%d\n\n", emp3.firstName, emp3.lastName, emp3.employeeType, emp3.hoursWorked);
 }
 
-//Add command function. Pick up here from where you left off, on the add function
+/*Pick up here from where you left off for addEmployees();
+Find way to prompt one piece of data at a time.
+Also, find way to store entered data and add to already existing employee list.
+*/
 
-void add() {
-  printf("Enter employee's first name");
+void addEmployees() {
+  printf("Enter employee's first name: ");
   scanf("%c", &enterFirstName[50]);
-  printf("Enter employee's last name");
+  printf("\nEnter employee's last name: ");
   scanf("%c", &enterLastName[50]);
+  printf("\nEnter employee's work status: ");
+  scanf("%c", &enterWorkStatus[10]);
+  printf("\nEnter employee's work hours: ");
+  scanf("%d", &enterWorkHours);
 }
 
 void search(char *str) {
@@ -67,6 +76,9 @@ int main(void) {
     else if (strcmp(command, "show") == 0) {
       displayEmployees();
     }
+    else if (strcmp(command, "add") == 0) {
+      addEmployees();
+      }
     else if(strcmp(command, "exit") == 0) {
       exit = TRUE;
     }
