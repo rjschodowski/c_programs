@@ -1,0 +1,50 @@
+/*  Weekly Code Gym! Practice - Problems taken from W3 Resource - https://www.w3resource.com/
+
+   Write a program in C to print the elements of an array in reverse order. Go to the editor
+Test Data :
+Input the number of elements to store in the array (max 15) : 5
+Input 5 number of elements in the array :
+element - 1 : 2
+element - 2 : 3
+element - 3 : 4
+element - 4 : 5
+element - 5 : 6
+Expected Output :
+
+ The elements of array in reverse order are :                                                                 
+ element - 5 : 6                                                                                              
+ element - 4 : 5                                                                                              
+ element - 3 : 4                                                                                              
+ element - 2 : 3                                                                                              
+ element - 1 : 2    
+   */
+
+
+#include <stdio.h>
+// #define MAXSIZE 15
+const int MAXSIZE = 15;
+
+int main() {
+  int size;
+  printf("Input the number of elements to store in the array (max 15) :\n");
+  scanf("%d", &size);
+  if(size > MAXSIZE)
+  {
+    printf("Invalid size.");
+    printf("Input the number of elements to store in the array (max 15) :\n");
+    scanf("%d", &size);
+  }
+
+  int arr[size];
+  for(int i = 0; i < size; i++)
+    {
+      printf("Enter a number: \n");
+      scanf("%d", &arr[i]);
+    }
+
+  for(int i = size-1; i >=0; i--)
+    {
+      printf("%d ", arr[i]);
+    }
+  
+}
