@@ -1,0 +1,45 @@
+/*
+Our Code Gym! problem of the week. Please note, we did have some difficulty understanding the initial problem below, but we feel this is what the author is looking for.
+
+Participants: Lloyd, Jeffrey, R.J.
+
+Write a program in C to show a pointer to an array which contents are pointer to structure. Go to the editor
+Expected Output :
+
+
+
+
+
+Exmployee Name : Alex
+Employee ID : 1002
+*/
+
+
+
+
+
+#include <stdio.h>
+#include <string.h>
+
+
+
+typedef struct employee
+{
+char name[20];
+int id;
+} employee;
+
+
+
+int main()
+{
+employee e_arr[3];
+employee *ptr0 = &e_arr[0];
+strcpy (e_arr->name, "Bob");
+e_arr -> id = 10022628;
+
+printf ("Employee name: \t%s\n", e_arr->name);
+printf ("Employee ID: \t%d\n", e_arr->id);
+return 0;
+}
+
