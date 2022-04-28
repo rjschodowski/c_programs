@@ -1,0 +1,26 @@
+//Calculate area of a right angle triangle
+//formula: 1/2 * (base * height)
+
+#include <stdio.h>
+
+double calc_triangle(double base, double height)
+{
+  double area = 0.5 * (base*height);
+  return area;
+}
+
+int main() {
+  while (1) {
+  printf("\n*******Triangle Area Calculator*******\n\n");
+
+  double base1, height1;
+ 
+  printf("Enter triangle's base measurement: \n");
+  scanf("%lf", &base1);
+  printf("Enter triangle's height measurement: \n");
+  scanf("%lf", &height1);
+
+  double calculated_area = calc_triangle(base1, height1);
+
+  printf("Triangle area is %.4lf\n", calculated_area);
+    }
