@@ -1,0 +1,26 @@
+#include <stdio.h>
+//Calculate interest over time
+
+
+
+double cal_interest(double principal, double interest_rate, double years)
+{
+  double total_interest = (principal * interest_rate * years) / 100;
+  return total_interest;
+}
+
+int main() {
+  while(1) {
+  double prin, int_rt, yrs;
+  printf("Enter your principal amount: ");
+  scanf("%lf", &prin);
+  printf("Enter your interest rate: ");
+  scanf("%lf", &int_rt);
+  printf("Enter your number of years: ");
+  scanf("%lf", &yrs);
+
+  double calculated_interest = cal_interest(prin, int_rt, yrs);
+
+  printf("You total interest is: %.2lf\n\n", calculated_interest);
+    }
+}
