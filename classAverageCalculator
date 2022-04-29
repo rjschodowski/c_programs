@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+/*
+I decided to create a student class average calculator using a do while loop. I changed it to a for loop,
+as I found it easier to work with in implementing the solution. Next I will try this same solution, but with
+a do while loop, and see what happens.
+*/
+
+int main() {
+
+  int class_size = 0;
+  int student_number=1;
+  
+  double sum_percentages=0;
+  double class_average = 0;
+
+  while(1) {
+
+  printf("Student Class Average Calculator\n");
+  printf("*****************************************\n");
+  printf("Enter your student class size: \n");
+  scanf("%d", &class_size);
+  
+  for(int counter = 1; counter<=class_size; counter++) {
+    double student_percentage[counter];
+    printf("Enter grade for student %d of class size %d: \n", student_number, class_size);
+    scanf("%lf", &student_percentage[counter]);
+    student_number++;
+    sum_percentages = student_percentage[counter] + student_percentage[counter-1];
+    class_average = sum_percentages / class_size;
+
+  } 
+
+  printf("The total class average is: %.2lf\n\n", class_average);
+ }
+}
