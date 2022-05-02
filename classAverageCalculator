@@ -1,10 +1,11 @@
 /*
-This is my second attempt. I discovered from a previous code exercise that I could do this more simply with a function.
-Unfortunately, this is not the final solution, as the answer returns as either 0 or garbage data. I realized afterward a couple of things:
+This is my third (and finally, successful!) attempt. Here is a recap of what I discovered from my previous attempts:
 
-1) placement of the array parameter within the function is critical
-2) put your parenthesis around the function call when dealing with arrays (pointers)
-3) it's better to set your counter to 0 in this case, and then use pointer arithmetic
+1) There is a much easier way of solving this problem with the use of a function taking in an array, class size, and answer (sum) parameters.
+   It simply makes the program easier to read and it cuts out unnecessary extra work.
+2) placement of the array parameter within the function is critical
+3) put your parenthesis around the function call when dealing with arrays (pointers)
+4) it's better to set your counter to 0 in this case, and then use pointer arithmetic
    to increment student number starting at number 1 (instead of 0). Whenever I set it
    at 1, I'd get garbage data for my calculation.
 */
