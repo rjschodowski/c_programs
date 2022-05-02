@@ -1,36 +1,41 @@
-#include <stdio.h>
-
 /*
-I decided to create a student class average calculator using a do while loop. I changed it to a for loop,
-as I found it easier to work with in implementing the solution. Next I will try this same solution, but with
-a do while loop, and see what happens.
+This is my second attempt. I discovered from a previous code exercise that I could do this more simply with a function.
+Unfortunately, this is not the final solution, as the answer returns as either 0 or garbage data. I realized afterward a couple of things:
+
+1) placement of the array parameter within the function is critical
+2) put your parenthesis around the function call when dealing with arrays (pointers)
+3) it's better to set your counter to 0 in this case, and then use pointer arithmetic
+   to increment student number starting at number 1 (instead of 0). Whenever I set it
+   at 1, I'd get garbage data for my calculation.
 */
 
+#include <stdio.h>
+
+double sum_grades(double arr[], int class_size, double sum_of_grades)
+{
+  for(int i = 0; i < class_size; i++)
+    {
+      sum_of_grades += arr[i];
+    }
+  return sum_of_grades/class_size;
+}
+
 int main() {
-
-  int class_size = 0;
-  int student_number=1;
+  int class_size;
+  int sum_of_grades;
   
-  double sum_percentages=0;
-  double class_average = 0;
-
-  while(1) {
-
   printf("Student Class Average Calculator\n");
   printf("*****************************************\n");
-  printf("Enter your student class size: \n");
+  printf("Enter your student class size: ");
   scanf("%d", &class_size);
-  
-  for(int counter = 1; counter<=class_size; counter++) {
-    double student_percentage[counter];
-    printf("Enter grade for student %d of class size %d: \n", student_number, class_size);
-    scanf("%lf", &student_percentage[counter]);
-    student_number++;
-    sum_percentages = student_percentage[counter] + student_percentage[counter-1];
-    class_average = sum_percentages / class_size;
 
-  } 
+  double arr[class_size];
 
-  printf("The total class average is: %.2lf\n\n", class_average);
- }
+  for(int i = 0; i < class_size; i++)
+    {
+      printf("Enter student number %d\'s grade: ", i+1);
+      scanf("%lf", &arr[i]);
+    }
+  printf("The avg of the student grades are %.2lf", (sum_grades(arr, class_size, sum_of_grades)));
+  return 0;
 }
