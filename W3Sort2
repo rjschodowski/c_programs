@@ -1,0 +1,72 @@
+/*CodeGym! 4/28/2022
+Participants: Lloyd, Jeff, Stuart, R.J.
+
+#include <stdio.h>
+
+//  Bubble sort code gym
+// Online C Compiler - Build, Compile and Run your C programs online in your favorite browser
+
+#include<stdio.h>
+
+void bubble_sort (int arr[]);
+void bubble_sort_while (int arr[]);
+void swap (int arr[], int x, int y);
+
+int main()
+{
+    int arr[] = {3, 6, 1, 7, 2};
+    //bubble_sort_while (arr);
+    bubble_sort (arr);
+    
+    for (int i = 0; i<5; i++)
+    {
+    printf("%d ", arr[i]);
+    }
+    printf("\n");
+    return 0;
+}
+
+void bubble_sort (int arr[])
+{
+    int swap_flag = 0;
+    do
+    {
+        swap_flag = 0;
+        for (int i=1;i < 5; i++)
+        {
+            if (arr[i] < arr[i-1])
+            {
+                swap (arr, i, i-1);
+                swap_flag = 1;
+            }
+        }
+    }while (swap_flag);
+}
+
+void bubble_sort_while (int arr[])
+{
+    int swap_flag = 0;
+    while (1)
+    {
+        swap_flag = 0;
+        for (int i=1;i < 5; i++)
+        {
+            if (arr[i] < arr[i-1])
+            {
+                swap (arr, i, i-1);
+                swap_flag = 1;
+            }
+        }
+        if (!swap_flag)
+        {
+            break;
+        }
+    }
+}
+
+void swap (int arr[], int x, int y)
+{
+    int temp = arr[x];
+    arr[x] = arr[y];
+    arr[y] = temp;
+}
