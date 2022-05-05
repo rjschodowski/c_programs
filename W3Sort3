@@ -1,0 +1,52 @@
+/*
+CodeGym! problem of the week 5-5-2022
+Write a C program to sort a list of elements using the insertion sort algorithm.
+Participants: Lloyd, Marshall, Stuart, Jeff, R.J.
+
+Pseudo code
+
+Our first attempt
+
+create an array of 5 elements ()
+
+create variable int keyIndex (index of current card)
+create variable to store index of sort/inspect element   int store;
+
+create function
+
+void sort(){
+ int keyIndex;
+ int store;
+ int size;
+ int arr[] = {1,5,4,2,3};
+
+ for(int i = 0; i < size; i++)
+{
+  for(keyIndex = i; keyIndex >= 0; keyIndex--)
+{
+  if (keyIndex < one on the left)
+{
+key index takes overits spot and move it right;
+} else {
+ if (key index > one on the left)
+{
+  keyIndex stays in current spot store = i;
+}
+}
+}
+}
+} 
+
+
+We realized there might be a more efficient approach, so this is our second attempt so far:
+
+
+void swapNumbers(int arr[], int size, int index1, int index2)
+{
+  int temp = arr[index2];
+  arr[index2] = arr[index1];
+  arr[index1] = temp;
+}
+
+
+*/
