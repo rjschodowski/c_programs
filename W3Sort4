@@ -1,0 +1,14 @@
+/* C program for Merge Sort 
+Write a C program to sort a list of elements using the merge sort algorithm.
+*/
+#include<stdlib.h>
+#include<stdio.h>
+
+void mergeSort(int arr[], int left, int right)
+{
+  
+}
+
+int main() {
+  
+}
