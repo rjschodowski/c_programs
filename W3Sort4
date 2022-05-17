@@ -1,14 +1,82 @@
-/* C program for Merge Sort 
-Write a C program to sort a list of elements using the merge sort algorithm.
-*/
+/* C program for Merge Sort */
 #include<stdlib.h>
 #include<stdio.h>
 
-void mergeSort(int arr[], int left, int right)
+void mergeSort(int arr[], int length); //function to carry out algorithm. used to make using the algorithm simpler for the programmer
+void mergeSortRecursion(int a[], int l, int r);//carries out recursive step of algorithm, continually dividing up array into smaller and smaller portions
+void mergeSortedArrays(int a[], int l, int m, int r);//merges the two sorted arrays into one sorted array
+
+int main()
 {
+  int array[] = {9, 4, 8, 1, 7, 0, 3, 2, 5, 6};
+  int length = 10;
+
+  mergeSort(array, length);
+
+  for (int i=0; i<length; i++)
+    {
+      printf("%d ", array[i]);
+      // printf("\n");
+    }
+}
+
+void mergeSort(int a[], int length)
+{
+  mergeSortRecursion(a, 0, length-1);//call this function to carry the algorithm with the portion of the array we are concerned about, which in this case is the entire array initially
+}
+
+void mergeSortRecursion(int a[], int l, int r) //l=left index, r=right index, a[]=array
+{
+  if (l<r) //if statement used because we eventually want the recursion to stop
+  {
+    int m=l + (r-l)/2; //defines the middle of this portion of the array that we're looking at
+
+    mergeSortRecursion(a, l, m); //left index to middle
+    mergeSortRecursion(a, m+1, r);//middle to right index
+
+    mergeSortedArrays(a, l, m, r);
+  }
   
 }
 
-int main() {
+void mergeSortedArrays(int a[], int l, int m, int r) //l=left index, r=right index, m=middle index
+{
+  //we first need the length of each portion of the array we are looking at
+  int leftLength = m-l+1;
+  int rightLength = r-m;
+
+
+  //Resume notes from video at 8:10
+  //https://www.youtube.com/watch?v=LeWuki7AQLo
+  
+  int tempLeft[leftLength];
+  int tempRight[rightLength];
+
+  int i, j, k;
+
+  for (int i =0; i<leftLength; i++)
+    {
+      tempLeft[i] = a[l+i];
+    }
+
+  for (int i =0; i<rightLength; i++)
+    {
+      tempRight[i] = a[m+1+i];
+    }
+
+  for (i=0, j=0, k=l; k<=r; k++)
+  {
+    if ((i<leftLength) &&
+      (j>=rightLength || tempLeft[i]<=tempRight[j]))
+    {
+      a[k] = tempLeft[i];
+      i++;
+    }
+    else
+    {
+      a[k] = tempRight[j];
+      j++;
+    }
+  }
   
 }
