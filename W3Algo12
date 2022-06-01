@@ -1,0 +1,26 @@
+//Write a program to delete all duplicate numbers from the sorted array.
+
+#include <stdio.h>
+
+int main(void) {
+  int array[10];
+  int size;
+  int i;
+
+  //Input the elements of the array
+  printf("Enter 10 numbers, some of which are duplicates\n");
+  for(i=0; i<10; i++)
+    {
+      scanf("%d", &array[i]);
+    }
+
+  //Find the duplicate numbers
+  
+
+  //Print your cleaned up array's numbers
+  printf("Your array numbers are: ");
+  for(i=0; i<10; i++)
+    {
+      printf("%d", array[i]);
+    }
+}
